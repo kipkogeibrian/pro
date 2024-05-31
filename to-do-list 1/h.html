@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <h1>To-Do List</h1>
+
+    <div class="task-inputs">
+        <input type="text" id="taskDescription" placeholder="Task Description">
+        <label for="date">start Date:</label>
+        <input type="date" id="startDate">
+        <label for="time">Start time:</label>
+        <input type="time" id="startTime">
+        <label for="priorityLevel">priorityLevel:</label>
+        <select id="priorityLevel">
+            <option value="" disabled selected>Priority Level</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <label for="date">due Date:</label>
+        <input type="date" id="dueDate">
+        <label for="time">dueTime:</label>
+        <input type="time" id="dueTime">
+        <label for="status">Status:</label>
+        <select id="status">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <input type="text" id="searchBar" placeholder="Search Tasks" oninput="searchTasks()">
+
+    <table id="taskTable" border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Task Description</th>
+                <th>Start Date</th>
+                <th>Start Time</th>
+                <th>Priority Level</th>
+                <th>Due Date</th>
+                <th>Due Time</th>
+                <th>Status</th>
+                <th>Alert</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <ul id="suggestions"></ul>
+
+    <script src="js.js"></script>
+</body>
+</html>
